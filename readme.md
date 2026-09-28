@@ -2,16 +2,15 @@
 INSTITUTO FEDERAL BAIANO - CAMPUS GUANAMBI
 Disciplina: Estrutura de Dados
 Professor: Reinaldo Cotrim
-Trabalho Avaliativo: Pilhas e Filas em C (Tema Livre)
+Trabalho Avaliativo: Pilhas e Filas em C (ESPECIAL FOOD)
 ===================================================================
 
 1. IDENTIFICACAO DO PROJETO E INTEGRANTES
 - Nome do Projeto: Sistema Especial Food - Delivery
 - Tema: Gerenciamento de Pedidos e Historico de Entregas (Especial Food)
 - Integrantes da Equipe (ate 3 alunos):
-  1. [Nome do Integrante 1]
-  2. [Nome do Integrante 2]
-  3. [Nome do Integrante 3]
+  1. [Vinicius Benevides Reis]
+  2. [Hiago Rocha Silva]
 
 -------------------------------------------------------------------
 2. DEFINICAO DO TEMA E JUSTIFICATIVAS TEORICAS
@@ -109,16 +108,3 @@ Para a apresentacao ao professor, execute os seguintes passos no menu:
   com free(), exibe o total de nos liberados e finaliza sem vazamento de memoria.
 
 -------------------------------------------------------------------
-7. SUGESTAO DE DIVISAO PARA APRESENTACAO (Equipe de 3 Alunos)
-- Integrante 1 (delivery.h e main.c):
-  * Apresenta o problema do Delivery e as structs (No, Fila, Pilha).
-  * Mostra a arte da interface e a opcao 2 (integracao Fila -> Pilha).
-
-- Integrante 2 (fila.c):
-  * Apresenta os conceitos de FIFO, insercao no fim e remocao no inicio.
-  * Demonstra que ao retirar o unico elemento, inicio e fim viram NULL.
-
-- Integrante 3 (pilha.c):
-  * Apresenta os conceitos de LIFO, insercao e remocao no topo.
-  * Demonstra o estorno e a liberacao completa de memoria com free().
-===================================================================
