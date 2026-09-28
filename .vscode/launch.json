@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Executar Delivery",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/delivery",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "Compilar Delivery"
+        }
+    ]
+}
