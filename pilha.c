@@ -5,9 +5,9 @@
 
 void inicializarPilha(Pilha *p) {
     p->topo = NULL;
-}
+} 
 
-int pilhaVazia(Pilha *p) {
+int pilhaVazia(Pilha *p) { 
     return (p->topo == NULL);
 }
 

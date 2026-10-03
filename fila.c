@@ -21,10 +21,8 @@ int enfileirar(Fila *f, int id, char cliente[], char item[], float valor) {
     }
 
     novo->id = id;
-    strncpy(novo->cliente, cliente, sizeof(novo->cliente) - 1);
-    novo->cliente[sizeof(novo->cliente) - 1] = '\0';
-    strncpy(novo->item, item, sizeof(novo->item) - 1);
-    novo->item[sizeof(novo->item) - 1] = '\0';
+    strcpy(novo->cliente, cliente);
+    strcpy(novo->item, item);
     novo->valor = valor;
     novo->proximo = NULL;
 
@@ -52,10 +50,8 @@ int desenfileirar(Fila *f, No *removido) {
 
     if (removido != NULL) {
         removido->id = aux->id;
-        strncpy(removido->cliente, aux->cliente, sizeof(removido->cliente) - 1);
-        removido->cliente[sizeof(removido->cliente) - 1] = '\0';
-        strncpy(removido->item, aux->item, sizeof(removido->item) - 1);
-        removido->item[sizeof(removido->item) - 1] = '\0';
+        strcpy(removido->cliente, aux->cliente);
+        strcpy(removido->item, aux->item);
         removido->valor = aux->valor;
         removido->proximo = NULL;
     }

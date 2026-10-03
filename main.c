@@ -94,7 +94,7 @@ int main(void) {
                 limparBuffer();
                 printf("  +---------------------------------------------------+\n");
 
-                if (enfileirar(&filaPedidos, proximoId, cliente, item, valor)) {
+                if (enfileirar(&filaPedidos, proximoId, cliente, item, valor)) { 
                     proximoId++;
                 }
                 break;
@@ -124,7 +124,7 @@ int main(void) {
 
             case 6:
                 printf("\n  +--- [ESTORNO DE ENTREGA / DESEMPILHAR] -----------+\n");
-                desempilhar(&pilhaHistorico, NULL);
+                desempilhar(&pilhaHistorico, NULL); 
                 printf("  +---------------------------------------------------+\n");
                 break;
 
