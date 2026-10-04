@@ -4,19 +4,12 @@
 #include "delivery.h"
 
 void limparBuffer(void) {
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF) {
+    char c;
+    while ((c = getchar()) != '\n') {
     }
 }
 
-void lerTexto(char *destino, int tamanho) {
-    if (fgets(destino, tamanho, stdin) != NULL) {
-        size_t len = strlen(destino);
-        if (len > 0 && destino[len - 1] == '\n') {
-            destino[len - 1] = '\0';
-        }
-    }
-}
+
 
 void exibirCabecalho(void) {
     printf("\n");
@@ -77,14 +70,10 @@ int main(void) {
             case 1:
                 printf("\n  +--- [NOVO PEDIDO] ---------------------------------+\n");
                 printf("  | Nome do cliente: ");
-                do {
-                    lerTexto(cliente, sizeof(cliente));
-                } while (strlen(cliente) == 0);
+                scanf(" %[^\n]", cliente);
 
                 printf("  | Item/Lanche pedido: ");
-                do {
-                    lerTexto(item, sizeof(item));
-                } while (strlen(item) == 0);
+                scanf(" %[^\n]", item);
 
                 printf("  | Valor do pedido (R$): ");
                 while (scanf("%f", &valor) != 1 || valor <= 0) {

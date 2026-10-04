@@ -20,10 +20,8 @@ int empilhar(Pilha *p, int id, char cliente[], char item[], float valor) {
     }
 
     novo->id = id;
-    strncpy(novo->cliente, cliente, sizeof(novo->cliente) - 1);
-    novo->cliente[sizeof(novo->cliente) - 1] = '\0';
-    strncpy(novo->item, item, sizeof(novo->item) - 1);
-    novo->item[sizeof(novo->item) - 1] = '\0';
+    strcpy(novo->cliente, cliente);
+    strcpy(novo->item, item);
     novo->valor = valor;
     novo->proximo = p->topo;
     p->topo = novo;
@@ -31,9 +29,9 @@ int empilhar(Pilha *p, int id, char cliente[], char item[], float valor) {
     printf("\n  [OK] Pedido #%d registrado no TOPO do historico (Pilha).\n", id);
     printf("  [CONTROLE PILHA] topo -> Pedido #%d\n", p->topo->id);
     return 1;
-}
+} // a função empilhar
 
-int desempilhar(Pilha *p, No *removido) {
+int desempilhar(Pilha *p, No *removido) { //passo como argumento 
     if (pilhaVazia(p)) {
         printf("\n  [AVISO] O historico (Pilha) esta vazio! Nao ha pedido para remover.\n");
         return 0;
@@ -41,12 +39,10 @@ int desempilhar(Pilha *p, No *removido) {
 
     No *aux = p->topo;
 
-    if (removido != NULL) {
+    if (removido != NULL) { 
         removido->id = aux->id;
-        strncpy(removido->cliente, aux->cliente, sizeof(removido->cliente) - 1);
-        removido->cliente[sizeof(removido->cliente) - 1] = '\0';
-        strncpy(removido->item, aux->item, sizeof(removido->item) - 1);
-        removido->item[sizeof(removido->item) - 1] = '\0';
+        strcpy(removido->cliente, aux->cliente);
+        strcpy(removido->item, aux->item);
         removido->valor = aux->valor;
         removido->proximo = NULL;
     }
